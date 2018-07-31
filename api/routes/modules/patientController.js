@@ -14,7 +14,7 @@ route.post('/', (req, res) => {
       else res.send(doc)
     })
   }
-  else res.send("please provide, firstname, lastname ,sex and disease")
+  else res.send("please provide firstname, lastname ,sex and disease")
 })
 
 
