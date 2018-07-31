@@ -2,12 +2,17 @@
     <div class="container bg-light">
         <guest-mode :isGuest="userType == 'guest'" @guestmodeoff="reset"></guest-mode>
         <div class="row">
+<<<<<<< HEAD
             <div id="description" class="row col-md-7 col-lg-8 text-center">
+=======
+            <div id="description" class="row col-md-8 text-center">
+>>>>>>> cfe8c7963d4c12671b2071759cfe787ca4416984
                 <div class="col-sm-3 col-md-3">
                     <diaga :isLoading="isLoading" class="pull-right" id="diaga" ></diaga>
                 </div>
                 <div v-if="!isLoading" class="text col-sm-9 col-md-9">
                     <choices :question="question" v-if="question" @go="parseAndGo"></choices>
+<<<<<<< HEAD
                     <div class="parser" v-else>
                         <h3 class="question">Hi I'm Aihma, How may I help</h3>
                         <input @keypress.enter="Diagnose" v-model="parser" placeholder="eg. I feel dizzy" class="answer" type="search" autofocus>
@@ -16,16 +21,34 @@
                 </div>
             </div>
             <div class="col-md-5 col-lg-4">          
+=======
+                    <div v-else>
+                        <h3 class="question">Hi I'm Aihma, How may I help</h3>
+                        <input @keypress.enter="Diagnose" v-model="parser" placeholder="eg. I feel dizzy" class="answer" type="search" autofocus>
+                        <button @click="Diagnose" class="btn btn-info btn-raised">go</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">          
+>>>>>>> cfe8c7963d4c12671b2071759cfe787ca4416984
                 <vs-card>
                     <vs-card-header vs-background-color="#00bcd4" vs-title="Possible Diagnosis" >
                         <i class="fa fa-stethoscope"></i>
                     </vs-card-header>
                     <vs-card-body>
+<<<<<<< HEAD
                     <ul v-if="conditions"  class="list-group ">
                         <li v-for="condition in conditions" :key="condition.id" class="list-group-item">
                             <div class="row">
                                 <p class="col-9">{{condition.name}}</p>
                                 <p class="text-muted col-3" :class="{'alert-success': condition.probability > .9}"> {{ (condition.probability * 100).toFixed(2)  }}%</p>
+=======
+                    <ul v-if="conditions"  class="list-group card-body">
+                        <li v-for="condition in conditions" :key="condition.id" class="list-group-item">
+                            <div class="row">
+                                <p class="col-9">{{condition.name}}</p>
+                                <p class="text-muted col-3" :class="{'alert-success': condition.probability > .9}"> {{ condition.probability * 100 }}%</p>
+>>>>>>> cfe8c7963d4c12671b2071759cfe787ca4416984
                             </div>
                         </li>
                         <button class="btn btn-raised btn-info" @click="restartDiag">Restart diagnosis</button>
@@ -44,7 +67,11 @@
                 </vs-card>
             </div>
         </div>
+<<<<<<< HEAD
         {{evidences}}
+=======
+        {{evidences}} evidences
+>>>>>>> cfe8c7963d4c12671b2071759cfe787ca4416984
         <choice-popup :active="popup.default" @genderAgeSetted="setStatus" @canceled="popup.default = false"></choice-popup>
     </div>
 </template>
@@ -107,11 +134,17 @@ export default {
             this.gender = doc.gender,
             this.userType = doc.type
             this.popup.default = false
+<<<<<<< HEAD
             this.Diagnose()
         },
 
         parseAndGo(payload){
             console.log(payload)
+=======
+        },
+
+        parseAndGo(payload){
+>>>>>>> cfe8c7963d4c12671b2071759cfe787ca4416984
             if(!this.evidences && payload){
                 this.evidences = []
             }
@@ -137,6 +170,7 @@ export default {
                     if(!doc.data.error){
                         doc = doc.data
                         console.log("result", doc)
+<<<<<<< HEAD
                         if(doc.question){
                             this.conditions = doc.conditions
                             this.question = doc.question
@@ -147,6 +181,12 @@ export default {
                                 text: 'Can\'t seem to find what\'s wrong with you at the moment',
                                 color: 'warning',
                             })
+=======
+                        if(doc){
+                            this.conditions = doc.conditions
+                            this.question = doc.question
+                            this.evidences = doc.evidences
+>>>>>>> cfe8c7963d4c12671b2071759cfe787ca4416984
                         }
                     }else this.$vs.notify({
                         text: doc.data.error,
@@ -242,5 +282,8 @@ export default {
     #gender-select{
         margin-top: 3px;
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> cfe8c7963d4c12671b2071759cfe787ca4416984
 </style>

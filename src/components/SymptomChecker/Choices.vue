@@ -7,11 +7,19 @@
                 <single :item="question.items[0].choices" @clicked="pushSingle"></single>
             </div>
             <div v-else-if="question.type == 'group_single'">
+<<<<<<< HEAD
                 <group-single :item="question.items" @clicked="pushSingleGroup"></group-single>  
             </div>
             <!--Will fix you later-->
             <div v-else-if="question.type == 'group_multiple'">
                 <group-multiple :item="question.items" @clicked="pushGroupMultiple"></group-multiple>
+=======
+                <group-single :item="question.items" @clicked="addEvidence"></group-single>  
+            </div>
+            <!--Will fix you later-->
+            <div v-else-if="question.type == 'group_multiple'">
+                <group-multiple :item="question.items" @clicked="addEvidence"></group-multiple>
+>>>>>>> cfe8c7963d4c12671b2071759cfe787ca4416984
             </div>
         </template>
     </div>  
@@ -44,6 +52,7 @@ export default {
            this.$emit('go', this.evidence) 
         },
 
+<<<<<<< HEAD
         pushGroupMultiple(payload){
             this.evidence = ''
             for(let item of payload){
@@ -58,6 +67,8 @@ export default {
             
         },
 
+=======
+>>>>>>> cfe8c7963d4c12671b2071759cfe787ca4416984
         pushSingle(payload){
             this.addEvidence({
                 id: this.question.items[0].id,
@@ -65,11 +76,14 @@ export default {
             })
             this.go()
         },
+<<<<<<< HEAD
 
         pushSingleGroup(payload){
             this.addEvidence(payload)
             this.go()
         }
+=======
+>>>>>>> cfe8c7963d4c12671b2071759cfe787ca4416984
     }
 }
 </script>

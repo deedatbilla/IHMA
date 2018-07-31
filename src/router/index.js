@@ -16,7 +16,10 @@ const Home = ()=>import('../components/Home')
 const Appointments = ()=>import('../components/Appointments/Main')
 const SymptomChecker = ()=>import('../components/SymptomChecker/Main')
 const Prescriptions = ()=>import('../components/Prescriptions/Main')
+<<<<<<< HEAD
 const EmergencyMap = ()=>import('../components/EmergencyMap/leafMain')
+=======
+>>>>>>> cfe8c7963d4c12671b2071759cfe787ca4416984
 
 Vue.use(Router)
 
@@ -63,9 +66,14 @@ export default new Router({
         {name: 'Home', path: '/', component: Home},
         {name: 'Appointments', path: '/appointments', component: Appointments},
         {name: 'Diagnosis', path: '/diagnosis', component: SymptomChecker},
+<<<<<<< HEAD
         {path: '/diagnosis', redirect: 'Diagnosis'},
         {name: 'Prescriptions', path: '/prescriptions', component: Prescriptions},
         {name: 'EmergencyMap', path: '/emergency', component: EmergencyMap},
+=======
+        {name: 'Diagnosis', path: '/symptom_checker', component: SymptomChecker},
+        {name: 'Prescriptions', path: '/prescriptions', component: Prescriptions},
+>>>>>>> cfe8c7963d4c12671b2071759cfe787ca4416984
 
       ]
     }

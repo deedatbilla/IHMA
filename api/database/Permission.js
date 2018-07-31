@@ -36,11 +36,14 @@ Permission.pre('save', function(next){
     }
     if(!this.role) this.role = 'developer'
     if(!this.target) this.target = 'self'
+<<<<<<< HEAD
     if(this.role === 'developer'){
         this.actions = ['create', 'read', 'delete', 'update']
         this.is_default = true
     }
 
+=======
+>>>>>>> cfe8c7963d4c12671b2071759cfe787ca4416984
     next()
 })
 

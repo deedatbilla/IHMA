@@ -1,5 +1,9 @@
 <template>
+<<<<<<< HEAD
     <div id="topnav" v-if="isVissible">
+=======
+    <div id="topnav">
+>>>>>>> cfe8c7963d4c12671b2071759cfe787ca4416984
         <section class="title-bar">
             <div class="logo">
                 <router-link to="/"><img id="logo" src="../../assets/img/logo.png" alt="" /></router-link>
@@ -137,7 +141,10 @@
     </div>
 </template>
 <script>
+<<<<<<< HEAD
 import {bus} from '../../main'
+=======
+>>>>>>> cfe8c7963d4c12671b2071759cfe787ca4416984
 const SearchBar = ()=>import('./Search')
 const Mails = ()=>import('./notification/drawer')
 
@@ -146,6 +153,7 @@ export default{
     components:{SearchBar, Mails},
     data(){
     return{
+<<<<<<< HEAD
         search: '',
         isVissible: true,
 
@@ -157,6 +165,13 @@ export default{
             else this.isVissible = true
         })
     }
+=======
+        search: ''
+    }
+    },
+    methods:{
+    },
+>>>>>>> cfe8c7963d4c12671b2071759cfe787ca4416984
 }
 </script>
 <style scoped>
@@ -180,8 +195,11 @@ export default{
         background: #fff;
         padding-bottom: 10px; 
     }
+<<<<<<< HEAD
 
     .hidden{
         display: none;
     }
+=======
+>>>>>>> cfe8c7963d4c12671b2071759cfe787ca4416984
 </style>

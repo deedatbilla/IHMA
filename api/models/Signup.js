@@ -35,7 +35,11 @@ route.all('/', (req, res)=>{
                     else{
                         User.findOne({email: req.body.email}, (err, doc)=>{
                             if(doc){
+<<<<<<< HEAD
                                 res.json({error: 'Username already exsists'})
+=======
+                                res.json({error: 'Email already exsists'})
+>>>>>>> cfe8c7963d4c12671b2071759cfe787ca4416984
                             }   
                             else res.json({error: 'Error signing you up, please try again'})
                        })

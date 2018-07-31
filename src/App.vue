@@ -19,7 +19,10 @@ const TopNav = ()=>import('./components/navbar/top')
 const SideNav = ()=>import('./components/navbar/Sidebar')
 import axios from 'axios'
 import host from '../config/host'
+<<<<<<< HEAD
 import Socket from 'socket.io-client'
+=======
+>>>>>>> cfe8c7963d4c12671b2071759cfe787ca4416984
 
 export default {
   name: 'App',
@@ -29,6 +32,7 @@ export default {
         console.log('Logging out now')
         this.$router.push('login')
         }
+<<<<<<< HEAD
     },
   },
   components:{TopNav,SideNav},
@@ -57,6 +61,11 @@ export default {
     //   })
     // })
   },
+=======
+    }
+  },
+  components:{TopNav,SideNav},
+>>>>>>> cfe8c7963d4c12671b2071759cfe787ca4416984
 }
 </script>
 <style>

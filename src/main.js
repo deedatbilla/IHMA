@@ -38,9 +38,12 @@ Vue.use(Vuex)
 Vue.use(iview)
 
 
+<<<<<<< HEAD
 export const bus = new Vue()
 
 Vue.config.ignoredElements = [/^ion-/]
+=======
+>>>>>>> cfe8c7963d4c12671b2071759cfe787ca4416984
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
