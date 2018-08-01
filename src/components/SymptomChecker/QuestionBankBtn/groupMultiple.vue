@@ -1,6 +1,5 @@
 <template>
     <div>
-<<<<<<< HEAD
         <button 
         @click="addEvidence(choice)" 
         :class="{
@@ -11,17 +10,12 @@
         v-for="(choice, index) in item"
         :key="index"> {{choice.name}}</button>
         <button @click="next" class="btn btn-primary">Next</button>
-=======
-        <button class="btn btn-secondary col-12" v-for="(choice, index) in item" :key="index"> {{choice.name}}</button>
-        <button class="btn btn-primary"><i class="fa fa-arrow"></i></button>
->>>>>>> cfe8c7963d4c12671b2071759cfe787ca4416984
     </div>
 </template>
 <script>
 
 export default {
     name: 'group-multiple',
-<<<<<<< HEAD
     props:['item'],
     data(){
         return{
@@ -66,10 +60,4 @@ export default {
         background: #5bc0de;
     }
 </style>
-=======
-    props:['item']
-}
-
-</script>
->>>>>>> cfe8c7963d4c12671b2071759cfe787ca4416984
 

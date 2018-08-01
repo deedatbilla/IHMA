@@ -26,14 +26,8 @@ export default {
 }
 </script>
 <style scoped>
-<<<<<<< HEAD
     .btn{
         margin-top: 0px;
     }
-=======
- .btn{
-     margin-top: 0px
- }
->>>>>>> cfe8c7963d4c12671b2071759cfe787ca4416984
 </style>
 

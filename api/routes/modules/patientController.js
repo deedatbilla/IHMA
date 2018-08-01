@@ -14,7 +14,7 @@ route.post('/', (req, res) => {
       else res.send(doc)
     })
   }
-  else res.send("please provide firstname, lastname ,sex and disease")
+  else res.send("please provide firstname lastname sex and disease")
 })
 
 
@@ -36,7 +36,7 @@ route.get('/', (req,res)=>{
 route.put('/:id', (req, res) => {
   PatientSchema.findById(req.params.id, 'FirstName', function (error, doc) {
     if (error) { console.error(error); }
-    doc.name=req.body.name
+    doc.FirstName=req.body.FirstName
     doc.save(function(error){
       if(error){
         res.send({error: 'error updating record'})

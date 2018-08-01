@@ -4,34 +4,22 @@
   "description": "api endpoint",
   "main": "index.js",
   "scripts": {
-<<<<<<< HEAD
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon index"
-=======
-    "test": "echo \"Error: no test specified\" && exit 1"
->>>>>>> cfe8c7963d4c12671b2071759cfe787ca4416984
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-<<<<<<< HEAD
     "axios": "^0.18.0",
-=======
->>>>>>> cfe8c7963d4c12671b2071759cfe787ca4416984
     "body-parser": "^1.18.3",
     "cors": "^2.8.4",
     "express": "^4.16.3",
     "jsonwebtoken": "^8.2.1",
     "mongoose": "^5.1.2",
-<<<<<<< HEAD
     "morgan": "^1.9.0",
     "nodemailer": "^4.6.5",
     "nodemon": "^1.18.2",
     "password-hash": "^1.2.2",
     "socket.io": "^2.1.0"
-=======
-    "nodemailer": "^4.6.5",
-    "password-hash": "^1.2.2"
->>>>>>> cfe8c7963d4c12671b2071759cfe787ca4416984
   }
 }

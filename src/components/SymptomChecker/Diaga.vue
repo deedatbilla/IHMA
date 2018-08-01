@@ -25,10 +25,7 @@
 .sk-cube-grid {
   width: 100px;
   height: 100px;
-<<<<<<< HEAD
   
-=======
->>>>>>> cfe8c7963d4c12671b2071759cfe787ca4416984
 }
 
 .sk-cube-grid .sk-cube {

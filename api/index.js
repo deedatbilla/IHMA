@@ -5,17 +5,11 @@ const mongoose = require('mongoose')
 const db = require('./config/db')
 const cors = require('cors')
 const bodyParser = require('body-parser')
-<<<<<<< HEAD
 const morgan = require('morgan')
 
 app.use(bodyParser.json())
 app.use(cors())
 app.use(morgan("short"))
-=======
-
-app.use(bodyParser.json())
-app.use(cors())
->>>>>>> cfe8c7963d4c12671b2071759cfe787ca4416984
 
 app.use(express.static(__dirname + '/public'));
 
@@ -27,7 +21,6 @@ mongoose.connect(db.name,(err)=>{
 
     console.log('connected')
 
-<<<<<<< HEAD
     const Login = require('./routes/Login')
     const Signup = require('./routes/Signup')
     const Activate = require('./routes/activate')
@@ -43,14 +36,6 @@ mongoose.connect(db.name,(err)=>{
     //For Devs only
     const FeatureController = require('./routes/Features/FeaturesController')
     app.use('/feature', FeatureController)
-=======
-    const Login = require('./models/Login')
-    const Signup = require('./models/Signup')
-    const Activate = require('./models/activate')
-    const PermissionAdder = require('./models/Features/PermissionAdder')
-    const Diagnosis = require('./models/Features/Diagnosis')
-    const Prescription = require('./models/Features/Prescriptions')
->>>>>>> cfe8c7963d4c12671b2071759cfe787ca4416984
     
     
     app.use('/login', Login)
@@ -59,7 +44,6 @@ mongoose.connect(db.name,(err)=>{
     app.use('/permission-adder', PermissionAdder)
     app.use('/diagnosis', Diagnosis)
     app.use('/prescription', Prescription)
-<<<<<<< HEAD
     app.use('/hospital', Hospital)
     app.use('/user', User)
     app.use('/drug',Drug)
@@ -89,9 +73,5 @@ mongoose.connect(db.name,(err)=>{
 
     // })
         
-=======
-      
-    app.listen(80);
->>>>>>> cfe8c7963d4c12671b2071759cfe787ca4416984
 });
 

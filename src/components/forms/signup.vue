@@ -1,18 +1,10 @@
 <template>
-<<<<<<< HEAD
    <form-temp>
         <div id="login-btn">
             <router-link to="login">
                 <vs-button type="primary-raised" >Log In</vs-button>
             </router-link>
         </div>
-=======
-    <vs-row 
-    id="signup"
-    vs-align="center"
-    vs-type="flex" vs-justify="space-around" vs-w="12">
-    <vs-col vs-justify="center" vs-align="center" vs-lg="4" vs-xs="12" vs-sm="6">
->>>>>>> cfe8c7963d4c12671b2071759cfe787ca4416984
             <vs-card id="signup-card"  class="holamundo" >
                  <vs-alert v-if="error" vs-icon="warning" vs-active="true" vs-color="danger">
                         {{error}}
@@ -25,15 +17,12 @@
                         <template lang="html">
                             <div class="">
                                 <vs-tabs>
-<<<<<<< HEAD
                                 <vs-tab vs-label="Phone">
                                     <div class="con-tab-ejemplo">
 
                                     sign up service will be available soon
                                     </div>
                                 </vs-tab>
-=======
->>>>>>> cfe8c7963d4c12671b2071759cfe787ca4416984
                                 <vs-tab vs-label="Email">
                                     <div class="con-tab-ejemplo">
                                         <vs-input 
@@ -69,15 +58,6 @@
                                             vs-type="password" vs-label-placeholder="Password" v-model="repassword"/>
                                     </div>
                                 </vs-tab>
-<<<<<<< HEAD
-=======
-                                <vs-tab vs-label="Phone">
-                                    <div class="con-tab-ejemplo">
-
-                                    Service
-                                    </div>
-                                </vs-tab>
->>>>>>> cfe8c7963d4c12671b2071759cfe787ca4416984
                                 </vs-tabs>
                             </div>
                             </template>
@@ -91,28 +71,17 @@
                     Already have an account? <router-link to="login">Click here</router-link>
                 </div>
             </vs-card>
-<<<<<<< HEAD
    </form-temp>
-=======
-            
-        </vs-col>
-    </vs-row>
->>>>>>> cfe8c7963d4c12671b2071759cfe787ca4416984
 </template>
 <script>
 import host from '../../../config/host'
 import axios from 'axios'
-<<<<<<< HEAD
 
 import FormTemp from './Template'
 
 export default {
     name: 'login',
     components:{FormTemp},
-=======
-export default {
-    name: 'login',
->>>>>>> cfe8c7963d4c12671b2071759cfe787ca4416984
     data(){
         return {
             username: '',
@@ -190,15 +159,12 @@ export default {
     #signup-card{
         background: #eee;
     }
-<<<<<<< HEAD
 
     #login-btn{
         position: absolute;
         top: 0;
         right: 0;
     }
-=======
->>>>>>> cfe8c7963d4c12671b2071759cfe787ca4416984
     
 </style>
 

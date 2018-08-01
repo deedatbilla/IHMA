@@ -1,9 +1,5 @@
 <template>
-<<<<<<< HEAD
 <div v-if="isVissible" id="sidebar">
-=======
-<div id="sidebar">
->>>>>>> cfe8c7963d4c12671b2071759cfe787ca4416984
     <nav class="user-menu">
         <div class="pull-right">
             <a v-on:click="show()" v-bind:class="{active: isShowMenu}" class="main-menu-access btn">
@@ -25,11 +21,7 @@
                 <router-link :to="'/'+link.sub_name">
                     <i :class="link.fa_icon" class="nav_icon"></i>
                     <span class="nav-text text-capitalize">
-<<<<<<< HEAD
 					{{ link.sub_name || capitalize }}
-=======
-					{{ link.name }}
->>>>>>> cfe8c7963d4c12671b2071759cfe787ca4416984
 					</span>
                 </router-link>
             </li>
@@ -79,11 +71,8 @@
 </template>
 <script>
 
-<<<<<<< HEAD
     import {bus} from '../../main'
 
-=======
->>>>>>> cfe8c7963d4c12671b2071759cfe787ca4416984
     export default{
         name: 'main-menu',
         props:[ 'urls' ],
@@ -91,12 +80,8 @@
             return{
                 showMenu: false,
                 isShowMenu: false,
-<<<<<<< HEAD
                 navs: '',
                 isVissible: true
-=======
-                navs: ''
->>>>>>> cfe8c7963d4c12671b2071759cfe787ca4416984
             }
         },
         methods:{
@@ -109,13 +94,10 @@
             }
         },
         created(){
-<<<<<<< HEAD
             bus.$on('hide_navs', (e)=>{
                 if(e) this.isVissible = false
                 else this.isVissible = true
             })
-=======
->>>>>>> cfe8c7963d4c12671b2071759cfe787ca4416984
             this.navs = this.$store.getters.permissions
         }
       
