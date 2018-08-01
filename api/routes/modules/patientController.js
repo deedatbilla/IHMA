@@ -63,4 +63,15 @@ route.delete('/:id', (req, res) => {
   })
 })
 
+
+//getting a patient record
+route.get('/:FirstName', (req, res) => {
+  let name = new RegExp(req.params.FirstName, 'i');
+  PatientSchema.find({ FirstName: name }).then(doc => {
+    res.send(doc)
+  }).catch(err => {
+    console.log('error')
+  })
+})
+
 module.exports = route
