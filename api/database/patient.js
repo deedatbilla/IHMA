@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 
-
+//From lab tests, to consultations , to surgery to even proscriptions from a doctor
 const PatientSchema =new mongoose.Schema({
 	FirstName: {
 		type: String,
@@ -19,17 +19,23 @@ const PatientSchema =new mongoose.Schema({
 		type:Date,
         default:Date.now
 	},
-	sex: {
-		type: String,
-		//required: true,
-		
-	},
-	
+	sex:String,
+	age:Number,
+	blood_group:String,
+	height:Number,
+	weight:Number,
+	blood_pressure:Number,
+	cholestrol:Number,
 	diseases: {
         type: Array,
         default: []
-     },
-     
+	 },
+	 allergies: {
+        type: Array,
+        default: []
+	 },
+	 
+	
 	
 	
 });

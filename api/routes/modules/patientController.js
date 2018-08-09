@@ -34,7 +34,7 @@ route.get('/', (req,res)=>{
 })
 //updating Patient record
 route.put('/:id', (req, res) => {
-  PatientSchema.findById(req.params.id, 'FirstName', function (error, doc) {
+  PatientSchema.findById(req.params.id, 'id', function (error, doc) {
     if (error) { console.error(error); }
     doc.FirstName=req.body.FirstName
     doc.save(function(error){
